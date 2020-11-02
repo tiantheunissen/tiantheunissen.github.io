@@ -1,1 +1,383 @@
-Hello World
+<html>
+<head>
+<title>Tian Theunissen</title>
+<meta property="og:image" content="http://preetum.nakkiran.org/misc/gauss/display_image.png" />
+<link rel="stylesheet" href="style.css">
+<style>
+
+.papers li {
+  margin: 10px 0;
+}
+
+.hl {
+    background-color: rgb(255, 255, 208);
+    /* list-style-position: inside; */
+    padding: 5px;
+}
+
+p.quote {
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.main {
+    /* border: 1px solid black; */
+    max-width: 900px;
+}
+
+.columns {
+    display: flex;
+    /* padding: 30px; */
+}
+
+.column{
+    /* margin-left: 30px; */
+    margin-right: 30px;
+}
+.columnb {
+    flex : 1;
+    margin-right: 0px;
+}
+.columnc {
+    flex : 1;
+    margin-left: 20px;
+}
+
+header {
+    /* border: 1px solid gray; */
+    display: flex;
+}
+header .desc{
+    margin-right: 30px;
+    max-width: 400px;
+}
+
+.headshot {
+    width: 256px;
+    height: 256px;
+    display:block;
+    background: url("./me_grey.jpg") no-repeat;
+    background-size: 256px;
+}
+.headshot:hover {
+    background: url("./imgs/mri_slice0.png") no-repeat;
+    background-size: 256px;
+}
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23928740-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23928740-2');
+</script>
+
+<script>
+let mri=false;
+window.addEventListener('scroll', function(e) {
+  if( !mri && window.scrollY > 300 ){
+      document.querySelector('.headshot').style.backgroundImage="url('./imgs/mri_slice0.png')";
+      mri=true;
+  }
+});
+</script>
+</head>
+<body>
+
+
+<div class="container">
+<div class="main">
+
+<header>
+    <div class="column">
+    <!-- <img src="me_grey.jpg" width="256px"> -->
+    <a href="./misc/mri">
+        <div class="headshot"></div>
+    </a>
+    </div>
+    <div class="desc">
+        <h1>Preetum Nakkiran</h1>
+        I'm a 5th-year PhD student at Harvard,
+        in the <a href="https://toc.seas.harvard.edu/">Theory of Computation</a>
+and <a href="https://mltheory.org/">ML Theory</a> Groups,
+advised by <a href="http://madhu.seas.harvard.edu/">Madhu Sudan</a>
+and <a href="https://boazbarak.org">Boaz Barak</a>.
+
+<p>
+I'm currently trying to
+understand why deep learning works.
+I do theory by doing experiments.
+        <p>
+        <a href="https://scholar.google.com/citations?hl=en&user=zithBbUAAAAJ&view_op=list_works">
+            <b>[publications]</b></a>
+            &emsp; &emsp;
+        <a href="./pdf/cv.pdf">
+            <b>[CV]</b></a>
+            &emsp; &emsp;
+        <a href="https://twitter.com/PreetumNakkiran">
+            <b>[twitter]</b></a>
+            &emsp; &emsp;
+        <code>preetum@cs.harvard.edu</code><br>
+    </div>
+
+    <!-- <div class="column">
+    <img src ="me_grey.jpg" width="256px">
+    </div> -->
+</header>
+
+<div class="row">
+<hr>
+<h2>
+    News:
+</h2>
+<ul>
+<li>
+<b>I am on the job market for industry research positions.</b>
+</li>
+<li>
+    See my <a href='https://media.mis.mpg.de/mml/2020-08-21/'>[invited talk]</a> on
+    <a href="https://arxiv.org/abs/2009.08092">Distributional Generalization</a>
+    at the Max Planck+UCLA Math ML Seminar.
+</li>
+<li>
+Summer 2020:
+Interned with
+<a href="https://research.google/people/HanieSedghi/">Hanie Sedghi</a>
+and
+<a href="https://www.neyshabur.net/">Behnam Neyshabur</a>
+at Google Brain.
+</li>
+<li>
+Spring 2020:
+Visited <a href="https://www.stat.berkeley.edu/~jsteinhardt/">Jacob Steinhardt</a>
+at UC Berkeley.
+</li>
+<li>
+Summer 2019:
+Interned with
+<a href="https://www.cs.toronto.edu/~ilya/">Ilya Sutskever</a>
+at OpenAI.
+</li>
+</ul>
+<hr>
+</div>
+
+
+
+<div class="columns">
+<div class = "columnb">
+<h2>Research</h2>
+I take a scientific approach
+to machine learning&mdash; trying to advance understanding
+through basic experiments and foundational theory.
+<p>
+See
+<a
+       href="https://scholar.google.com/citations?hl=en&user=zithBbUAAAAJ&view_op=list_works&sortby=pubdate"><b>[publications]</b></a>
+for full list of papers.
+
+<h3>Machine Learning Theory</h3>
+<ul class="papers">
+<li class="hl">
+    <a href="https://arxiv.org/pdf/2010.08127.pdf">
+        <b>The Deep Bootstrap: Good Online Learners are Good Offline Generalizers</b></a><br>
+    Preetum Nakkiran, Behnam Neyshabur, Hanie Sedghi
+    <br>
+    <i>In submission. 2020.</i>
+</li>
+<li class="hl">
+    <a href="https://arxiv.org/pdf/2009.08092.pdf">
+        <b>Distributional Generalization: A New Kind of Generalization</b></a><br>
+    Preetum Nakkiran*, Yamini Bansal*
+    <br>
+    <i>In submission. 2020.</i> <a href="https://media.mis.mpg.de/mml/2020-08-21/">[talk]</a>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/2005.07360.pdf">
+        <b>Learning Rate Annealing Can Provably Help Generalization, Even for Convex Problems</b></a><br>
+    Preetum Nakkiran
+    <br>
+    <i>Manuscript. 2020.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/2003.01897.pdf">
+        <b>Optimal Regularization Can Mitigate Double Descent</b></a><br>
+    Preetum Nakkiran, Prayaag Venkat, Sham Kakade, Tengyu Ma
+    <br>
+    <i>In submission. 2020.</i>
+</li>
+<li class="hl">
+    <a href="https://arxiv.org/pdf/1912.02292.pdf">
+        <b>Deep Double Descent: Where Bigger Models and More Data Hurt</b></a><br>
+    Preetum Nakkiran, Gal Kaplun*, Yamini Bansal*, Tristan Yang, Boaz Barak, Ilya
+    Sutskever<br>
+    <i>ICLR 2020.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1912.07242.pdf">
+        <b>More Data Can Hurt for Linear Regression:
+Sample-wise Double Descent</b></a><br>
+    Preetum Nakkiran<br>
+    <i>Manuscript. 2019.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1905.11604.pdf">
+        <b>SGD on Neural Networks Learns Functions of Increasing Complexity</b></a><br>
+    Preetum Nakkiran, Gal Kaplun, Dimitris Kalimeris, Tristan Yang, Benjamin L.
+    Edelman, Fred Zhang, Boaz Barak<br>
+    <i>NeurIPS 2019 (Spotlight).</i>
+</li>
+<li>
+    <a href="https://distill.pub/2019/advex-bugs-discussion/response-5/">
+        <b>Adversarial Examples are Just Bugs, Too</b></a><br>
+    Preetum Nakkiran<br>
+    <i>Distill 2019.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1901.00532.pdf">
+        <b>Adversarial Robustness May Be at Odds With Simplicity</b></a><br>
+    Preetum Nakkiran<br>
+    <i>(<a href="https://arxiv.org/abs/1902.01086">Merged</a> appears
+        in COLT 2019).</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1809.05596.pdf">
+        <b>The Generic Holdout:
+Preventing False-Discoveries in Adaptive Data Science</b></a><br>
+    Preetum Nakkiran, Jaros&#322;aw B&#322;asiok<br>
+    <i>Manuscript. 2018.</i>
+</li>
+</ul>
+
+<h3>Theory</h3>
+
+<ul class="papers">
+<li>
+    <a href="https://arxiv.org/pdf/1810.01969.pdf">
+        <b>Algorithmic Polarization for Hidden Markov Models</b></a><br>
+    Venkatesan Guruswami, Preetum Nakkiran, Madhu Sudan<br>
+    <i>ITCS 2019.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1802.02718.pdf">
+        <b>General Strong Polarization</b></a><br>
+    Jaros&#322;aw B&#322;asiok, Venkatesan Guruswami, Preetum Nakkiran, Atri Rudra, Madhu Sudan<br>
+    <i>STOC 2018.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1807.06479.pdf">
+        <b>Tracking the L2 Norm with Constant Update Time</b></a><br>
+    Chi-Ning Chou, Zhixian Lei, Preetum Nakkiran<br>
+    <i>APPROX-RANDOM 2018.</i>
+</li>
+<li>
+    <a href="https://arxiv.org/pdf/1511.06558.pdf">
+        <b>Near-Optimal UGC-hardness of Approximating Max k-CSP_R</b></a><br>
+    Pasin Manurangsi, Preetum Nakkiran, Luca Trevisan<br>
+    <i>APPROX-RANDOM 2016.</i>
+</li>
+</ul>
+
+<h3>Machine Learning</h3>
+<ul class="papers">
+<li>
+    <a href="https://ai.google/research/pubs/pub43813.pdf">
+        <b>Compressing Deep Neural Networks Using a Rank-Constrained Topology</b></a><br>
+        Preetum Nakkiran, Raziel Alvarez, Rohit Prabhavalkar, Carolina Parada<br>
+    <i>INTERSPEECH 2015.</i>
+</li>
+<li>
+    <a href="http://research.google.com/pubs/archive/43289.pdf">
+        <b>Automatic Gain Control and Multi-style Training for Robust Small-Footprint Keyword Spotting
+with Deep Neural Networks</b></a><br>
+Rohit Prabhavalkar, Raziel Alvarez, Carolina Parada, Preetum Nakkiran, and Tara
+Sainath<br>
+    <i>ICASSP 2015.</i>
+</li>
+</ul>
+</div>
+
+<div class = "columnc">
+<figure>
+<a href="https://mltheory.org/deep.pdf">
+    <img src="imgs/deep_img.png", width=100%>
+    <figcaption>Deep Double Descent</figcaption>
+</a>
+</figure>
+
+<figure>
+<a href="https://arxiv.org/abs/1905.11604">
+    <img src="imgs/sgd1.png", width=100%>
+    <figcaption>Dynamics of SGD</figcaption>
+</a>
+</figure>
+
+<figure>
+<a href="misc/gauss">
+    <img src="misc/gauss/display_image.png", width=100%>
+    <figcaption>Gauss's Principle of Least Action</figcaption>
+</a>
+</figure>
+
+<!-- <figure>
+<a href="misc/gauss">
+    <img src="imgs/manifold_img.svg", width=100%>
+    <figcaption>Gauss's Principle of Least Action</figcaption>
+</a>
+</figure> -->
+
+<h2>About Me</h2>
+I did my undergrad in EECS at UC Berkeley.
+I'm broadly interested in theory and science.
+
+<p>
+In the past, I have interned at OpenAI (with Ilya Sutskever)
+and Google Research (with Raziel Alvarez),
+and have also done research in error-correcting codes, distributed storage,
+and cryptography. I am partially supported by a Google PhD Fellowship,
+and I am grateful for past support from NSF GRFP.
+
+<p>
+See also my <a href="./index_old.html">old website</a> for more.
+This version borrowed in part from <a href="https://lucatrevisan.github.io/">Luca
+    Trevisan</a> and <a href="https://jonbarron.info/">Jon Barron</a>.
+
+<h2 style="margin-top:30pt">What People are Saying</h2>
+
+<p class="quote" style="text-align: right;">
+<i>a "high-level" scientist</i> &nbsp; &mdash;colleague (ML)
+</p>
+
+<p class="quote">
+<i>makes plots and draws lines through them</i>
+<br>
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&mdash;colleague (TCS)
+</p>
+
+<p class="quote" style="text-align: right;">
+<i>has merits that outweigh flaws</i> &nbsp; &mdash;reviewer 2
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
+
+</body>
+
+</html>
